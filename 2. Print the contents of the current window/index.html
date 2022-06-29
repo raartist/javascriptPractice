@@ -1,0 +1,32 @@
+<!-- 2. Write a JavaScript program to print the contents of the current window.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print the contents of the window.</title>
+  </head>
+  <body>
+    <h2>Print the contents of the window</h2>
+    <br />
+    <!-- first way -->
+    <button onclick="window.print()">Print</button>
+
+    <!-- second way -->
+    <button id="btn">Print</button>
+
+    <!-- third way -->
+    <button onclick="myFunction()">print 3</button>
+    <script>
+      const p = document.getElementById("btn");
+      p.onclick = function () {
+        myFunction();
+      };
+      function myFunction() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>
