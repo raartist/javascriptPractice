@@ -1,0 +1,32 @@
+<!-- 4. Write a JavaScript program to find the area of a triangle
+    where lengths of the three of its sides are 5, 6, 7. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Area of triangle</title>
+  </head>
+  <body>
+    <h2>Area of Triangle:</h2>
+    <p id="result"></p>
+
+    <script>
+      var el = document.getElementById("result");
+
+      //formula to calculate area of triangle : 1. first calculate semi perimeter = (a+b+c)/2;
+      //2. after that find area  =  [s(s-a)(s-b)(s-c)]*1 to the power 1/2 (square root).
+
+      function area(a, b, c) {
+        let S = (a + b + c) / 2;
+
+        let area = Math.sqrt(S * (S - a) * (S - b) * (S - c));
+        return area;
+      }
+
+      el.innerHTML = area(5, 6, 7).toFixed(2) + " unit" + "2".sup();
+    </script>
+  </body>
+</html>
